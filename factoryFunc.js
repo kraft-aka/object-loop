@@ -36,3 +36,7 @@ const employeeFactory = (name, age, position, email) => {
 const newEmp1 = employeeFactory('John Doe', 35, 'Sales Manager','johndoe@mail.com')
 getProps(newEmp1)
 newEmp1.getFullInfo()
+
+// object destructuring 
+const { name } = newEmp1;
+console.log(name)
