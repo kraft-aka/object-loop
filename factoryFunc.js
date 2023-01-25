@@ -19,3 +19,20 @@ const getProps = (obj) => {
 };
 
 getProps(tinCan);
+
+// with ES6
+const employeeFactory = (name, age, position, email) => {
+  return {
+    name,
+    age,
+    position,
+    email,
+    getFullInfo() {
+      console.log(`name:${this.name}, age:${this.age} position:${this.position}, email:${this.email}`)
+    }
+  }
+}
+
+const newEmp1 = employeeFactory('John Doe', 35, 'Sales Manager','johndoe@mail.com')
+getProps(newEmp1)
+newEmp1.getFullInfo()
